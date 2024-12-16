@@ -19,8 +19,8 @@ spring:
     name: restaurant-service
   datasource:
     url: jdbc:mysql://localhost:3306/restaurantdb
-    password: rootroot
-    username: root
+    password: ********
+    username: ****
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
