@@ -1,0 +1,13 @@
+server:
+  port: 8761
+
+eureka:
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+  instance:
+    hostname: localhost
+
+logging:
+  level:
+    '[com.netflix.discovery]': DEBUG

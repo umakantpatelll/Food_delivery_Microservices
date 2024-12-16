@@ -1,0 +1,53 @@
+server:
+  port: 9092
+
+
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:8761/eureka/
+#    register-with-eureka: true
+#    fetch-registry: true
+#  instance:
+#    hostname: localhost
+#    prefer-ip-address: false
+#    instance-id: ${spring.application.name}:${spring.cloud.client.hostname}:${server.port}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - health,info
+
+
+spring:
+  application:
+    name: food-catalogue-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/foodcataloguedb
+    password: rootroot
+    username: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+  instance:
+    hostname: localhost
+    prefer-ip-address: false
+#    instance-id: ${spring.application.name}:${spring.cloud.client.hostname}:${server.port}
+
+
+
+logging:
+  level:
+    '[com.netflix.eureka]': DEBUG
